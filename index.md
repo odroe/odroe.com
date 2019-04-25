@@ -1,3 +1,10 @@
+---
+title: Byte Gem · 字节琳琅
+description: 让你的想法用字节变为现实
+github:
+    repository_url: https://githun.com/bytegem
+---
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/bytegem/bytegem-site/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
