@@ -1,6 +1,10 @@
 module.exports = {
     base: '/',
     title: 'Byte Gem',
+    head: [
+        ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
+        ['link', { rel: 'icon', href: '/logo.svg' }],
+    ],
     themeConfig: {
         logo: '/logo.svg',
         nav: [
