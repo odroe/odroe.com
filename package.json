@@ -1,28 +1,20 @@
 {
-  "name": "bytegem.org",
-  "version": "0.1.0",
   "private": true,
+  "name": "@bytegem/website",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "github": "vue-cli-service build && echo bytegem.org > dist/CNAME && gh-pages -d dist"
+    "serve": "vuepress dev src",
+    "build": "vuepress build src"
   },
-  "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bytegem/website.git"
   },
+  "bugs": {
+    "url": "https://github.com/bytegem/website/issues"
+  },
+  "homepage": "https://github.com/bytegem/website#readme",
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.7.0",
-    "@vue/cli-plugin-eslint": "^3.7.0",
-    "@vue/cli-service": "^3.7.0",
-    "@vue/eslint-config-prettier": "^4.0.1",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "gh-pages": "^2.0.1",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
-    "vue-template-compiler": "^2.5.21"
-  }
+    "vuepress": "^1.5.4"
+  },
+  "dependencies": {}
 }
