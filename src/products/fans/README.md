@@ -1,6 +1,6 @@
 ---
-sidebar: auto
 home: true
+heroImage: /fans.svg
 heroText: Fans
 tagline: Fans 是一个基于腾讯 CloudBase 云开发的 Serverless 云原生一体化产品，针对社交领域的核心产品设计，简易化部署、多端构建、富于拓展！助力社交产品新发展
 actionText: Star on GitHub
