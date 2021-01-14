@@ -1,7 +1,9 @@
 <template>
     <footer class="footer">
         <p>Copyright © {{ year }} Byte Gem</p>
-        <p>蜀ICP备19019315号</p>
+        <p>
+            <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">蜀ICP备19019315号-1</a>
+        </p>
     </footer>
 </template>
 
