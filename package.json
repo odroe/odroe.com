@@ -1,20 +1,19 @@
 {
+  "name": "ordor.com",
+  "version": "0.1.0",
   "private": true,
-  "name": "@bytegem/website",
   "scripts": {
-    "serve": "vuepress dev src",
-    "build": "vuepress build src"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bytegem/website.git"
+  "dependencies": {
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
-  "bugs": {
-    "url": "https://github.com/bytegem/website/issues"
-  },
-  "homepage": "https://github.com/bytegem/website#readme",
   "devDependencies": {
-    "vuepress": "^1.5.4"
-  },
-  "dependencies": {}
+    "@types/react": "17.0.17",
+    "typescript": "4.3.5"
+  }
 }
