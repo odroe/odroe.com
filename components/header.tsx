@@ -23,17 +23,19 @@ const products = [
     description: 'Socfony 是 100% 开源的，你可以使用 Socfony 直接部署或者以此为基础开发你的 App。',
     href: 'https://github.com/odroe/socfony',
     icon: ChipIcon,
+    props: { rel: "noopener noreferrer", target: "_blank" },
   },
   {
     name: 'OOTP',
     description: 'OOTP 是一个支持多种编程语言，生成的一次性密码完全符合 HOTP 和 TOTP。🎉使用起来非常简单！',
     href: 'https://github.com/odroe/ootp',
     icon: ShieldCheckIcon,
+    props: { rel: "noopener noreferrer", target: "_blank" },
   },
 ]
 const productActions = [
   { name: '查看全部', href: '/products', icon: ViewGridIcon },
-  { name: '开源项目', href: 'https://github.com/odroe', icon: ExternalLinkIcon },
+  { name: '开源项目', href: 'https://github.com/odroe', icon: ExternalLinkIcon, props: { rel: "noopener noreferrer", target: "_blank" } },
 ]
 
 function classNames(...classes: string[]) {
@@ -47,7 +49,7 @@ export default function Header() {
       <Head>
         <title>Odroe | 耦左</title>
         <meta name="keywords" content="Odroe, 耦左, 科技, Socfony, OOTP" />
-        <meta name="description" content="One dream, One life. 耦左于2019年5月成立的互联网公司。因梦前行；为生活而奋斗；助力企业发展；开源成就事业！" />
+        <meta name="description" content="One dream, One life. 耦左成立于2019年5月的互联网公司。我们的使命“科技创新，开源共享”。因梦前行；为生活而奋斗；助力各行各业发展；开源成就事业！" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </Head>
@@ -101,6 +103,7 @@ export default function Header() {
                         <div className="relative grid gap-6  px-5 py-6 sm:gap-8 sm:p-8">
                           {products.map((item) => (
                             <a
+                              {...item.props}
                               key={item.name}
                               href={item.href}
                               className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 dark:hover:bg-black"
@@ -117,6 +120,7 @@ export default function Header() {
                           {productActions.map((item) => (
                             <div key={item.name} className="flow-root">
                               <a
+                                {...item.props}
                                 href={item.href}
                                 className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-black"
                               >
