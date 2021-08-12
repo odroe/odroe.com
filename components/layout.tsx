@@ -1,3 +1,4 @@
+import Footer from "./footer";
 import Header from "./header";
 
 type Props = {
@@ -8,10 +9,8 @@ export default function Layout({ children }: Props) {
     return (
         <>
             <Header />
-            <main className="pt-20 sm:pt-24">{children}</main>
-            <footer>
-                <p>&copy; 2018 Odroe</p>
-            </footer>
+            <main className="pt-20 sm:pt-24 bg-white text-black dark:bg-black dark:text-white bg-opacity-90 max-w-full">{children}</main>
+            <Footer />
         </>
     );
 };

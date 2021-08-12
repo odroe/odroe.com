@@ -15,6 +15,7 @@ import {
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import FullLogo from './full-logo'
 import { useRouter } from 'next/dist/client/router'
+import Head from 'next/head'
 
 const products = [
   {
@@ -42,7 +43,14 @@ function classNames(...classes: string[]) {
 export default function Header() {
   const router = useRouter()
   return (
-    <Popover as="header" className="fixed w-full bg-white dark:bg-black border-b-2 border-gray-100 dark:border-transparent">
+    <Popover as="header" className="fixed w-full bg-white dark:bg-black border-b-2 border-gray-100 dark:border-transparent z-50">
+      <Head>
+        <title>Odroe | 耦左</title>
+        <meta name="keywords" content="Odroe, 耦左, 科技, Socfony, OOTP" />
+        <meta name="description" content="One dream, One life. 耦左于2019年5月成立的互联网公司。因梦前行；为生活而奋斗；助力企业发展；开源成就事业！" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      </Head>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
           <Link href="/">
