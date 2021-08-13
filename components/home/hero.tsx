@@ -3,7 +3,7 @@ import HoneHeroImage from './hero-image';
 
 export default function HomeHeroSection() {
   return (
-    <section className="relative bg-white dark:bg-black dark:bg-opacity-50 overflow-hidden -mt-2">
+    <section className="relative bg-white dark:bg-black overflow-hidden -mt-2">
       <div className="max-w-7xl mx-auto py-12">
         <div className="pt-10 mx-auto max-w-7xl px-4 sm:pt-12 sm:px-6 md:pt-16 lg:pt-20 lg:px-8 xl:pt-28">
             <div className="text-center lg:text-left">
