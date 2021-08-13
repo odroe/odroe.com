@@ -3,7 +3,7 @@ import HoneHeroImage from './hero-image';
 
 export default function HomeHeroSection() {
   return (
-    <div className="relative bg-white dark:bg-black dark:bg-opacity-50 overflow-hidden -mt-2">
+    <section className="relative bg-white dark:bg-black dark:bg-opacity-50 overflow-hidden -mt-2">
       <div className="max-w-7xl mx-auto py-12">
         <div className="pt-10 mx-auto max-w-7xl px-4 sm:pt-12 sm:px-6 md:pt-16 lg:pt-20 lg:px-8 xl:pt-28">
             <div className="text-center lg:text-left">
@@ -42,6 +42,6 @@ export default function HomeHeroSection() {
       <div className="hidden lg:flex lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 justify-center items-center">
         <HoneHeroImage className="h-72 fill-current text-black dark:text-white block" />
       </div>
-    </div>
+    </section>
   )
 }
