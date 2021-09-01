@@ -16,7 +16,7 @@ export default function HomeHeroSection() {
                 以用户为中心、以技术创新为基础、以开源共享为目标，推动科技创新，助力各行各业发展，促进和谐社会。
               </div>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                <div className="rounded-md shadow">
+                {/* <div className="rounded-md shadow">
                   <Link href="/products">
                   <a
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
@@ -24,7 +24,7 @@ export default function HomeHeroSection() {
                     产品与服务
                   </a>
                   </Link>
-                </div>
+                </div> */}
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <a
                     href="https://github.com/odroe"

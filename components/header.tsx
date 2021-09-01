@@ -137,23 +137,23 @@ export default function Header() {
               )}
             </Popover>
 
-            <Link href="/news">
+            {/* <Link href="/news">
                 <a className={classNames(
                     router.pathname === '/news' ? 'text-gray-900 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400',
                     'text-base font-medium hover:text-gray-900 dark:hover:text-gray-100'
                 )}>
                 新闻
                 </a>
-            </Link>
+            </Link> */}
 
-            <Link href="/jobs">
+            {/* <Link href="/jobs">
                 <a className={classNames(
                     router.pathname === '/jobs' ? 'text-gray-900 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400',
                     'text-base font-medium hover:text-gray-900 dark:hover:text-gray-100'
                 )}>
                 工作
                 </a>
-            </Link>
+            </Link> */}
 
             <Link href="/">
                 <a className={classNames(
@@ -165,7 +165,7 @@ export default function Header() {
             </Link>
 
           </Popover.Group>
-          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+          {/* <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900 dark:hover:text-gray-300">
               登入
             </a>
@@ -175,7 +175,7 @@ export default function Header() {
             >
               注册账号
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -208,18 +208,18 @@ export default function Header() {
                             <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-300">产品与服务</span>
                         </a>
                     </Link>
-                    <Link href="/news">
+                    {/* <Link href="/news">
                         <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-black" >
                             <NewspaperIcon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
                             <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-300">新闻</span>
                         </a>
-                    </Link>
-                    <Link href="/jobs">
+                    </Link> */}
+                    {/* <Link href="/jobs">
                         <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-black" >
                             <OfficeBuildingIcon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
                             <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-300">工作</span>
                         </a>
-                    </Link>
+                    </Link> */}
                     <Link href="/">
                         <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-black" >
                             <EmojiHappyIcon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
@@ -229,7 +229,7 @@ export default function Header() {
                 </nav>
               </div>
             </div>
-            <div className="py-6 px-5 space-y-6">
+            {/* <div className="py-6 px-5 space-y-6">
                 <a
                   href="#"
                   className="w-full flex items-center justify-center px-4 py-2 border rounded-md shadow-sm text-base font-medium border-gray-900 dark:border-gray-400 text-black dark:text-gray-300"
@@ -239,7 +239,7 @@ export default function Header() {
                 <a className="mt-6 text-center text-base font-medium text-gray-500 block cursor-pointer">
                  登入
                 </a>
-            </div>
+            </div> */}
           </div>
         </Popover.Panel>
       </Transition>
