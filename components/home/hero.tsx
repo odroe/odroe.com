@@ -1,4 +1,4 @@
-import Link from 'next/link';
+
 import HoneHeroImage from './hero-image';
 
 export default function HomeHeroSection() {

@@ -1,4 +1,4 @@
-import { GlobeAltIcon, ShieldCheckIcon, LightningBoltIcon, EmojiHappyIcon } from '@heroicons/react/outline'
+import { GlobeAltIcon, ShieldCheckIcon, BoltIcon, FaceSmileIcon } from '@heroicons/react/24/outline'
 
 const features = [
   {
@@ -17,13 +17,13 @@ const features = [
     name: '技术实力',
     description:
       '我们都是极客，我们都热爱生活！对技术的追求保持一颗求学的心。Flutter、Node.JS、TypeScript、Rust 这些都是我们所热爱的。',
-    icon: LightningBoltIcon,
+    icon: BoltIcon,
   },
   {
     name: '诚信与法律',
     description:
       '秉承以人为本，用户为中心！法律是我们所必须遵守的最低标准，我们希望可以建立更高更可靠的关系与信任。',
-    icon: EmojiHappyIcon,
+    icon: FaceSmileIcon,
   },
 ]
 

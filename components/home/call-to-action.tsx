@@ -1,4 +1,4 @@
-import { MailIcon } from "@heroicons/react/outline";
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
 
 export default function HomeCATSection() {
     return (
@@ -14,7 +14,7 @@ export default function HomeCATSection() {
                 href="mailto:connect@odroe.com"
                 className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
               >
-                <MailIcon className="h-6 mr-2" />
+                <EnvelopeIcon className="h-6 mr-2" />
                 <span>发送邮件</span>
               </a>
             </div>

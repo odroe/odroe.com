@@ -2,17 +2,16 @@ import { Fragment } from 'react'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import {
-  ChipIcon,
-  MenuIcon,
-  ExternalLinkIcon,
+  CpuChipIcon,
+  Bars3Icon,
+  ArrowTopRightOnSquareIcon,
   ShieldCheckIcon,
-  XIcon,
-  ViewGridIcon,
-  NewspaperIcon,
-  EmojiHappyIcon,
-  OfficeBuildingIcon,
-} from '@heroicons/react/outline'
-import { ChevronDownIcon } from '@heroicons/react/solid'
+  XMarkIcon,
+  ViewColumnsIcon,
+  FaceSmileIcon,
+  BeakerIcon,
+} from '@heroicons/react/24/outline'
+import { ChevronDownIcon } from '@heroicons/react/24/solid'
 import FullLogo from './full-logo'
 import { useRouter } from 'next/dist/client/router'
 import Head from 'next/head'
@@ -22,7 +21,7 @@ const products = [
     name: 'Socfony',
     description: 'Socfony 是 100% 开源的，你可以使用 Socfony 直接部署或者以此为基础开发你的 App。',
     href: 'https://github.com/odroe/socfony',
-    icon: ChipIcon,
+    icon: CpuChipIcon,
     props: { rel: "noopener noreferrer", target: "_blank" },
   },
   {
@@ -32,10 +31,17 @@ const products = [
     icon: ShieldCheckIcon,
     props: { rel: "noopener noreferrer", target: "_blank" },
   },
+  {
+    name: 'Prisma ORM for Dart',
+    description: '◭ Next-generation ORM for Dart Navtive & Flutter | PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, MongoDB and CockroachDB',
+    icon: BeakerIcon,
+    props: { rel: "noopener noreferrer", target: "_blank" },
+    href: 'https://github.com/odroe/prisma-dart',
+  }
 ]
 const productActions = [
-  { name: '查看全部', href: '/products', icon: ViewGridIcon },
-  { name: '开源项目', href: 'https://github.com/odroe', icon: ExternalLinkIcon, props: { rel: "noopener noreferrer", target: "_blank" } },
+  { name: '查看全部', href: '/products', icon: ViewColumnsIcon },
+  { name: '开源项目', href: 'https://github.com/odroe', icon: ArrowTopRightOnSquareIcon, props: { rel: "noopener noreferrer", target: "_blank" } },
 ]
 
 function classNames(...classes: string[]) {
@@ -64,7 +70,7 @@ export default function Header() {
           <div className="-mr-2 -my-2 md:hidden">
             <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500  focus:outline-none">
               <span className="sr-only">菜单</span>
-              <MenuIcon className="h-6 w-6" aria-hidden="true" />
+              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
 
@@ -196,7 +202,7 @@ export default function Header() {
                 <div className="-mr-2">
                   <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500">
                     <span className="sr-only">关闭导航</span>
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
+                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
@@ -204,7 +210,7 @@ export default function Header() {
                 <nav className="grid gap-y-8">
                     <Link href="/products">
                         <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-black" >
-                            <ViewGridIcon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
+                            <ViewColumnsIcon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
                             <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-300">产品与服务</span>
                         </a>
                     </Link>
@@ -222,7 +228,7 @@ export default function Header() {
                     </Link> */}
                     <Link href="/">
                         <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-black" >
-                            <EmojiHappyIcon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
+                            <FaceSmileIcon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
                             <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-300">关于耦左</span>
                         </a>
                     </Link>

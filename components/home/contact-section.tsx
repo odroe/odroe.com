@@ -1,4 +1,4 @@
-import { MailIcon, PhoneIcon } from "@heroicons/react/outline"
+import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 
 const contacts = [
     {
@@ -40,7 +40,7 @@ export default function HomeContactsSection() {
                                 </div>
                             </div>
                             <div className="flex mt-6">
-                                <MailIcon className="h-6" />
+                                <EnvelopeIcon className="h-6" />
                                 <div className="ml-4">
                                     {item.email}
                                 </div>
