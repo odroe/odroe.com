@@ -29,7 +29,7 @@ export default function HomeContactsSection() {
                 </div>
                 <div className="m-auto sm:flex sm:flex-row">
                     {contacts.map(item => (
-                        <div className="sm:w-8/12 pt-6 text-gray-500">
+                        <div className="sm:w-8/12 pt-6 text-gray-500" key={item.name}>
                             <h2 className="text-xl leading-6 font-medium tracking-tight text-gray-600 sm:text-2xl dark:text-gray-200 ">{item.name}</h2>
                             <div className="pt-2 text-base text-gray-500 h-16">{item.message}</div>
                             <div className="flex mt-4">
