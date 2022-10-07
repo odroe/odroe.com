@@ -188,7 +188,7 @@ function Company() {
             leaveFrom="transform scale-100 opacity-100"
             leaveTo="transform scale-95 opacity-0"      
           >
-            <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-xl sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+            <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-xl sm:px-0 lg:mr-0 lg:right-1/2 lg:translate-x-24">
               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidde bg-white dark:bg-gray-900 flex divide-x divide-gray-100 dark:divide-gray-800">
                 <div className="relative grid gap-6 px-5 sm:p-8 w-auto">
                   {companyLinks.map(({ name, href }) => (
@@ -211,7 +211,7 @@ function Company() {
 
 function PopoverMenu() {
   return (
-    <Popover.Group className="hidden md:flex space-x-10 item-center mx-auto">
+    <Popover.Group className="hidden md:flex space-x-10 item-center ml-auto">
       <MenuGroup {...product} />
       <MenuGroup {...developer} />
       <MenuGroup {...useCases} />
@@ -227,11 +227,6 @@ export default function Header() {
         <div className="relative flex items-center py-4">
           <OdroePrimary />
           <PopoverMenu />
-          <Search />
-          <div className="hidden lg:flex ml-8 items-center pl-8 border-l border-slate-200 dark:border-slate-800">
-            <a href="/login" className="text-gray-800 dark:text-gray-100 hover:text-primary-500">Login</a>
-            <a href="/signup" className="rounded-lg text-sm font-semibold py-2 px-4 border border-primary-100 text-primary-500 ml-8 uppercase hover:bg-primary-500 hover:text-white dark:bg-primary-500 dark:text-white dark:border-none">Sign Up</a>
-          </div>
         </div>
       </nav>
     </header>
