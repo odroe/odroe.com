@@ -4,8 +4,6 @@ import Meta from "../components/meta";
 
 const title: string = "One dream, One life.";
 
-
-
 export default function Home() {
   return (
     <Layout>
