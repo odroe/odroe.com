@@ -19,7 +19,7 @@ const statistics: { title: string, description: string }[] = [
   },
   {
     title: '10+',
-    description: 'Paying customers'
+    description: 'Customers'
   },
   {
     title: '20+',
@@ -61,7 +61,7 @@ const Story = () => {
           <br />
           <br />
           Since our inception, we have developed many open source projects to helped more that 1000+ developers and teams.
-          We've also built-quality MVP project implementation solutions and assistance for more than 10+ paying customers.
+          We've also built-quality MVP project implementation solutions and assistance for more than 10+ customers.
         </div>
       </div>
     </div>
@@ -77,11 +77,11 @@ const Mission = () => (
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <Statistic />
       <Story />
       <Mission />
-    </main>
+    </>
   )
 }

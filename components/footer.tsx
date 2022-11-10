@@ -41,7 +41,7 @@ const scoialContactsMetadata = [
 const SocialContact = () => (
   <div className="flex mt-8 space-x-6 text-gray-600 dark:text-gray-400 justify-center">
     {scoialContactsMetadata.map((link) => (
-      <a className="hover:opacity-75 dark:hover:text-white" href={link.href} target="_blank" rel="noreferrer">
+      <a key={link.name} className="hover:opacity-75 dark:hover:text-white" href={link.href} target="_blank" rel="noreferrer">
         <span className="sr-only">{link.name}</span>
         <link.icon />
       </a>
@@ -70,6 +70,7 @@ const linkGroupsMetadata = [
     title: 'Use Cases',
     links: [
       { name: 'Customer Stories', href: '/showcase' },
+      { name: 'Enterprise', href: '/enterprise' },
     ],
   },
   {
