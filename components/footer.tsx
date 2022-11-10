@@ -53,8 +53,8 @@ const linkGroupsMetadata = [
   {
     title: 'Product',
     links: [
+      { name: 'Prisma ORM', href: 'https://prisma.pub' },
       { name: 'Parrot', href: 'https://parrot.odroe.com' },
-      { name: 'Prisma for Dart', href: 'https://prisma.pub' },
       { name: 'Socfony', href: 'https://socfony.com' },
     ],
   },
@@ -89,10 +89,10 @@ const Directory = () => (
   <div className='grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4'>
     {linkGroupsMetadata.map(({ title, links }) => (
       <div key={title}>
-        <h2 className="text-xl uppercase font-light tracking-wider text-gray-500">{title}</h2>
-        <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500 dark:text-gray-400">
+        <h2 className="text-xl uppercase font-light tracking-wider text-gray-500 dark:text-gray-400">{title}</h2>
+        <nav className="flex flex-col mt-4 space-y-2 text-sm">
           {links.map(({ name, href }) => (
-            <Link key={name} href={href} className="text-lg font-medium text-gray-800 hover:text-gray-500 hover:underline hover:underline-offset-4">
+            <Link key={name} href={href} className="text-lg font-medium text-gray-800 hover:text-gray-500 hover:underline hover:underline-offset-4 dark:text-white/80 dark:hover:text-white">
               {name}
             </Link>
           ))}
