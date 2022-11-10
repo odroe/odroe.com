@@ -6,11 +6,11 @@ export function NavBar() {
       <div className="container mx-auto py-3 flex flex-row items-center justify-start">
         <Link href="/" className="flex flex-row items-end">
           <span className="sr-only">Odroe home page</span>
-          <img src="/odroe.svg" alt="Odroe Logo" className="w-10" />
+          <img src="/odroe.svg" alt="Odroe Logo" className="w-10 aspect-square" />
           <span className='ml-1 font-medium text-xs leading-5 bg-slate-900 rounded-full text-white px-2'>ROE</span>
         </Link>
         <nav className="flex flex-row items-center mx-auto space-x-12 text-lg font-medium">
-          <Link href="/">Projects</Link>
+          <Link href="/">Product</Link>
           <Link href="/">Developer</Link>
           <Link href="/">Use Cases</Link>
           <Link href="/">Company</Link>
