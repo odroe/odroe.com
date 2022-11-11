@@ -14,7 +14,7 @@ export default function RootLayout({ children }: Props) {
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="bg-white dark:bg-black max-w-full">
+      <body className="dark:bg-black max-w-full bg-gray-50">
         <NavBar />
         {children}
         <Footer />
