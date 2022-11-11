@@ -68,7 +68,7 @@ export function NavBar() {
       <div className="container mx-auto py-3 flex flex-row items-center justify-start">
         <Link href="/" className="flex flex-row items-end mr-auto">
           <span className="sr-only">Odroe home page</span>
-          <img src="/odroe.svg" alt="Odroe Logo" className="w-10 aspect-square hover:animate-spin" />
+          <img src="/odroe.svg" alt="Odroe Logo" className="w-10 aspect-square" />
           <span className='ml-1 font-medium text-xs leading-5 bg-slate-900 rounded-full text-white px-2 dark:bg-gray-600 animate-bounce'>ROE</span>
         </Link>
         <nav className="hidden lg:flex flex-row items-center ml-auto sm:mr-12 space-x-12 text-lg font-medium text-black dark:text-white">
