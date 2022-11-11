@@ -70,7 +70,7 @@ const Hero = () => {
   return (
     <div className="w-full bg-[url('/pattern.svg')] bg-no-repeat bg-contain bg-right-bottom bg-height-fit">
        <div className="w-full flex flex-col items-center md:items-start pb-12 pt-24 container mx-auto px-6 md:px-12 xl:px-0">
-        <h1 className="text-5xl sm:text-3xl md:text-5xl font-semibold leading-tall mb-8 md:mb-12 text-black dark:text-white">Products</h1>
+        <h1 className="text-5xl sm:text-3xl md:text-5xl font-semibold leading-tall mb-8 md:mb-12 text-black dark:text-white uppercase">Products</h1>
         <h3 className="text-3xl sm:text-xl md:text-3xl font-semibold mb-4 text-black dark:text-white">Odroe ♥︎ Open Source</h3>
         <div className="text-grey-700 mb-12 leading-normal text-center md:text-left max-w-xl text-black dark:text-white">Open source software is the cornerstone of Odroe, and we collaborate with developers and teams around the world.</div>
         <Link
