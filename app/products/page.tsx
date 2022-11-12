@@ -91,7 +91,7 @@ export default () => {
       <Hero />
       <div className="container mx-auto mt-24 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 xl:px-0">
         {products.map((product, index) => (
-          <div key={index} className="bg-white px-6 py-8 flex flex-col rounded-2xl hover:shadow-2xl transition-auto duration-300 ease-in-out shadow-sm dark:bg-gray-900 ">
+          <div key={index} className="bg-white px-6 py-8 flex flex-col rounded-2xl hover:shadow-2xl hover:transition-auto hover:duration-300 hover:ease-in-out shadow-md dark:bg-gray-900">
             {product.image && (
               <div className="w-12 aspect-square bg-cover bg-center rounded-xl mb-6" style={{ backgroundImage: `url(${product.image})` }} />
             )}

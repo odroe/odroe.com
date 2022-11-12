@@ -15,7 +15,7 @@ const headerRef = createRef<HTMLElement>();
 
 const CustomDevelopment = () => {
   return (
-    <Link href="/" className="rounded-full px-6 py-2 bg-black text-white shadow-md shadow-gray-400 capitalize text-center block relative">
+    <Link href="/" className="rounded-full px-6 py-2 bg-black text-white shadow-md shadow-gray-400 capitalize text-center block relative dark:shadow-none dark:border">
       Custom Development
       <span className="flex h-4 w-4 absolute left-1 -bottom-1">
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
