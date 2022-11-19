@@ -4,10 +4,10 @@ import Link from "next/link"
 import { createRef, useEffect } from "react"
 
 const navigation = [
-  { name: "Product", href: "/products" },
+  { name: "Products", href: "/products" },
   { name: "Developer", href: "/developer" },
   { name: "Blog", href: "/blog" },
-  { name: "Use Cases", href: "/showcase" },
+  { name: "Use cases", href: "/showcase" },
   { name: "Company", href: "/company" },
 ]
 
