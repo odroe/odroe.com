@@ -16,19 +16,19 @@ const follow = [
 
 const navigation = [
   {
-    name: 'Documentation',
+    name: 'Documentation 📖',
     href: '/docs',
     description: 'Read our product and technical documentation, we will index all Odroe documents for you here.',
   },
   {
-    name: 'Support',
+    name: 'Support 🛠️',
     href: '/support',
     description: 'Get help from our support team, we will answer your questions as soon as possible.',
   },
   {
-    name: 'Community',
+    name: 'Community 🥳',
     href: '/community',
-    description: 'Join our community, it will be a good place for you to learn and share Odroe technology and products.',
+    description: 'Join our community! \n It is a good place for you to learn and share Odroe technology and products.',
   }
 ]
 
@@ -59,8 +59,10 @@ export default () => {
           {navigation.map((item) => (
             <a key={item.name} href={item.href} className="flex flex-col p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
               <div className="flex-1">
-                <p className="text-xl font-semibold text-black dark:text-white">{item.name}</p>
-                <p className="mt-3 text-base text-gray-500 dark:text-gray-400">{item.description}</p>
+                <p className="text-xl font-semibold text-black dark:text-white mb-2">{item.name}</p>
+                {
+                  item.description.split('\n').map(paragraph => <p className="py-1 text-base text-gray-500 dark:text-gray-400">{paragraph}</p> )
+                }
               </div>
             </a>
           ))}

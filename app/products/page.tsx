@@ -47,7 +47,7 @@ const products = [
   },
   {
     name: "OOTP",
-    description: "OOTP (Open One-time Password) is a supports multiple programming languages. The generated one-time passwords are fully compliant with HOTP (HMAC-based One-time Password) and TOTP (Time-based One-time Password). 🚀It's easy to use!",
+    description: "Open One-time Password solution, which supports multiple programming languages. The generated one-time passwords are fully compliant with HOTP (HMAC-based One-time Password) and TOTP (Time-based One-time Password). \n 🚀 Easy to use, fast to deploy!",
     keywords: ["Dart", "Rust", "JavaScipt", "TypeScript", "Node.js", "HOTP", "TOTP", "App"],
     links: [
       {
@@ -103,7 +103,12 @@ export default () => {
             </div>
 
             {/* description */}
-            <div className="mt-4 text-black/80 text-md font-normal break-words dark:text-gray-200">{product.description}</div>
+            
+            <div className="mt-4 text-black/80 text-md font-normal break-words dark:text-gray-200">
+            {
+                product.description.split('\n').map(paragraph => <p className="py-2">{paragraph}</p> )
+            }
+            </div>
 
             {/* links */}
             <div className="mt-auto flex flex-row space-x-4 pt-6">
