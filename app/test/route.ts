@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export const runtime = 'edge';
+export const runtime = 'node';
 
 export const GET = async (request: NextRequest) => {
   const ip = request.ip ?? '8.8.8.8';
