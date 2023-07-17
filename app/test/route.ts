@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 export const runtime = 'nodejs';
 
 export const GET = async (request: NextRequest) => {
-  const ip = request.ip ?? '8.8.8.8';
+  const ip = '8.8.8.8';
 
   const cashier = await fetch(
     'https://pay.ssl.kuaishou.com/payAPI/k/pay/kscoin/deposit/nlogin/kspay/cashier',
