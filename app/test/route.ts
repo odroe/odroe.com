@@ -30,7 +30,7 @@ export const GET = async (request: NextRequest) => {
   const result = [];
   result.push(order);
 
-  const form = new FormData();
+  const form = new URLSearchParams();
   form.append('provider', 'ALIPAY');
   form.append('merchant_id', order.merchantId);
   form.append('out_order_no', order.outOrderNo);
@@ -40,11 +40,12 @@ export const GET = async (request: NextRequest) => {
     'https://www.kuaishoupay.com/pay/order/h5/trade/create_pay_order',
     {
       method: 'POST',
-      body: form,
+      body: form.toString(),
       headers: {
         host: 'www.kuaishoupay.com',
         referer: 'https://www.kuaishoupay.com',
         'x-forwarded-for': ip,
+        'content-type': 'application/x-www-form-urlencoded',
       },
     },
   );
