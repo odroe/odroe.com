@@ -1,8 +1,10 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
 export const runtime = 'edge';
 
-export const GET = async () => {
+export const GET = async (request: NextRequest) => {
+  const ip = request.ip ?? '8.8.8.8';
+
   const cashier = await fetch(
     'https://pay.ssl.kuaishou.com/payAPI/k/pay/kscoin/deposit/nlogin/kspay/cashier',
     {
@@ -19,6 +21,7 @@ export const GET = async () => {
         'Content-Type': 'application/json',
         host: 'pay.ssl.kuaishou.com',
         referer: 'https://www.kuaishoupay.com',
+        'x-forwarded-for': ip,
       },
     },
   );
@@ -41,6 +44,7 @@ export const GET = async () => {
       headers: {
         host: 'www.kuaishoupay.com',
         referer: 'https://www.kuaishoupay.com',
+        'x-forwarded-for': ip,
       },
     },
   );
@@ -48,21 +52,25 @@ export const GET = async () => {
   const payment = await info.json();
   result.push(payment);
 
-  const search = new URLSearchParams(payment.gateway_pay_param.provider_config);
-  const alipayUrl = new URL(
-    'https://openapi.alipay.com/gateway.do?charset=utf-8',
+  return new NextResponse(
+    decodeURIComponent('payment.gateway_pay_param.provider_config'),
   );
-  search.forEach((value, key) => alipayUrl.searchParams.append(key, value));
 
-  const alipay = await fetch(alipayUrl, {
-    method: 'get',
-    headers: {
-      referer: 'https://www.kuaishoupay.com',
-    },
-    redirect: 'manual',
-  });
+  // const search = new URLSearchParams(payment.gateway_pay_param.provider_config);
+  // const alipayUrl = new URL(
+  //   'https://openapi.alipay.com/gateway.do?charset=utf-8',
+  // );
+  // search.forEach((value, key) => alipayUrl.searchParams.append(key, value));
 
-  result.push(alipay.headers.get('location'));
+  // const alipay = await fetch(alipayUrl, {
+  //   method: 'get',
+  //   headers: {
+  //     referer: 'https://www.kuaishoupay.com',
+  //   },
+  //   redirect: 'manual',
+  // });
 
-  return NextResponse.json(result);
+  // result.push(alipay.headers.get('location'));
+
+  // return NextResponse.json(result);
 };
