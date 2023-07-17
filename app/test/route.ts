@@ -53,7 +53,9 @@ export const GET = async (request: NextRequest) => {
   result.push(payment);
 
   return new NextResponse(
-    decodeURIComponent(payment.gateway_pay_param.provider_config),
+    decodeURIComponent(
+      decodeURIComponent(payment.gateway_pay_param.provider_config),
+    ),
   );
 
   // const search = new URLSearchParams(payment.gateway_pay_param.provider_config);
