@@ -1,9 +1,8 @@
-import { NextResponse } from 'next/server';
-import head from '../../developer/head';
+import { NextRequest, NextResponse } from 'next/server';
 
 export const runtime = 'nodejs';
 
-export const PATCH = async (request: NextResponse) => {
+export const PATCH = async (request: NextRequest) => {
   const headers: Record<string, string> = {};
   request.headers.forEach((value, key) => {
     headers[key] = value;
