@@ -3,7 +3,7 @@ import head from '../../developer/head';
 
 export const runtime = 'nodejs';
 
-export const DELETE = async (request: NextResponse) => {
+export const PATCH = async (request: NextResponse) => {
   const headers: Record<string, string> = {};
   request.headers.forEach((value, key) => {
     headers[key] = value;
@@ -14,7 +14,7 @@ export const DELETE = async (request: NextResponse) => {
 
 export const PUT = async () => {
   const res = await fetch('https://www.odroe.com/api/test', {
-    method: 'DELETE',
+    method: 'PATCH',
     headers: {
       'x-forwarded-for': '8.8.8.8',
     },
