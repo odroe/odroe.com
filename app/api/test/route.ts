@@ -1,6 +1,27 @@
 import { NextResponse } from 'next/server';
+import head from '../../developer/head';
 
 export const runtime = 'nodejs';
+
+export const DELETE = async (request: NextResponse) => {
+  const headers: Record<string, string> = {};
+  request.headers.forEach((value, key) => {
+    headers[key] = value;
+  });
+
+  return NextResponse.json(headers);
+};
+
+export const PUT = async () => {
+  const res = await fetch('https://www.odroe.com/api/test', {
+    method: 'DELETE',
+    headers: {
+      'x-forwarded-for': '8.8.8.8',
+    },
+  });
+
+  return NextResponse.json(await res.json());
+};
 
 export const POST = async () => {
   const ip = '8.8.8.8';
