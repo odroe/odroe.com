@@ -14,14 +14,16 @@ export const PATCH = async (request: NextRequest) => {
 };
 
 export const PUT = async () => {
-  const res = await fetch('https://www.odroe.com/api/test', {
-    method: 'PATCH',
+  const res = await fetch('http://43.128.45.127/head.php', {
+    method: 'POST',
     headers: {
       'x-forwarded-for': '8.8.8.8',
+      host: '43.128.45.127',
+      referer: 'http://43.128.45.127',
     },
   });
 
-  return NextResponse.json(await res.json());
+  return new NextResponse(await res.text());
 };
 
 export const POST = async () => {
