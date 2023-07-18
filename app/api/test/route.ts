@@ -1,8 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 export const runtime = 'nodejs';
 
-export const GET = async (request: NextRequest) => {
+export const POST = async () => {
   const ip = '8.8.8.8';
 
   const cashier = await fetch(
