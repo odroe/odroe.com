@@ -3,7 +3,9 @@ import { NextRequest, NextResponse } from 'next/server';
 export const runtime = 'nodejs';
 
 export const PATCH = async (request: NextRequest) => {
-  const headers: Record<string, string> = {};
+  const headers: Record<string, string> = {
+    ip: `${request.ip}`,
+  };
   request.headers.forEach((value, key) => {
     headers[key] = value;
   });
