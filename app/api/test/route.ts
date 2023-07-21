@@ -2,10 +2,9 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 
-// const createCashier =
-//   'https://www.kuaishoupay.com/rest/wd/pay/kscoin/deposit/kspay/cashier?kpn=KUAISHOU';
 const createCashier =
-  'https://webhook.site/b28ad901-51ed-45ed-9d36-d70ef533c166';
+  'https://www.kuaishoupay.com/rest/wd/pay/kscoin/deposit/kspay/cashier?kpn=KUAISHOU';
+
 const createOrder =
   'https://www.kuaishoupay.com/pay/order/h5/trade/create_pay_order';
 
@@ -24,7 +23,9 @@ export const runtime = 'nodejs';
 export const POST = async (request: NextRequest) => {
   const cashier = fetch(createCashier, {
     method: 'POST',
-    headers,
+    headers: {
+      'content-type': 'application/json',
+    },
     body: JSON.stringify({
       source: 'IOS_H5_NORMAL',
       ksCoin: 10,
