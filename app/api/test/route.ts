@@ -1,102 +1,37 @@
+// Fack IP: 8.8.8.8
+
 import { NextRequest, NextResponse } from 'next/server';
+
+const createCashier =
+  'https://www.kuaishoupay.com/rest/wd/pay/kscoin/deposit/kspay/cashier?kpn=KUAISHOU';
+const createOrder =
+  'https://www.kuaishoupay.com/pay/order/h5/trade/create_pay_order';
+
+const cookie =
+  '_did=web_5841840632E42430; did=web_364adf06bfeb89f51307e96766b3e654; didv=1688390355735; Hm_lvt_86a27b7db2c5c0ae37fee4a8a35033ee=1688114353,1689590403; login_method=3; userId=1974312666; kuaishou.recharge.web_st=ChhrdWFpc2hvdS5yZWNoYXJnZS53ZWIuc3QSsAEoa5270JoIkRiZXcssRTtaRpZAgQr9Ng58AJ4B8ANaFNGr2MX9wFPnZSmDeP5QyiqfpdBHW3fuGCHVKu3TUon5Zg6-3aTsUfH6_IiYNmYiRCNEI8UVwjKNfxyCOZPvq9nwIlNUlMB4nvDU0j4RvGsTDhXi1hRQ14xduy5vg41ShVKWqfrHpYqk7_DdWaw9z0uxgbk94F5uI2pYEJzyY9pZwquuC-cT4XCasi563ueS5xoS-ullcUS5CTCWKBqr1e_-KKXOIiCB0hrsbC9jnSArTB19gwo1btQDXsPq4ivif0-Lon3qZSgFMAE; kuaishou.recharge.web_ph=f56c42867825c397c9eb64003980879851eb; userIdFromPhone=1974312666';
+
+const ip = '8.8.8.8';
+const headers = {
+  cookie,
+  'x-forwarded-for': ip,
+};
 
 export const runtime = 'nodejs';
 export const POST = async (request: NextRequest) => {
-  const headers: Record<string, string> = {
-    ip: `${request.ip}`,
-  };
-  request.headers.forEach((value, key) => {
-    headers[key] = value;
+  const cashier = fetch(createCashier, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({
+      source: 'IOS_H5_NORMAL',
+      ksCoin: 10,
+      fen: 100,
+      customize: true,
+      kspayProvider: 'ALIPAY',
+      kspayProviderChannelType: 'NORMAL',
+    }),
   });
 
-  return NextResponse.json(headers);
+  const cashierRes = await cashier.then((res) => res.json());
+
+  return NextResponse.json(cashierRes);
 };
-
-// export const PUT = async () => {
-//   const res = await fetch('http://43.128.45.127/head.php', {
-//     method: 'POST',
-//     headers: {
-//       'x-forwarded-for': '8.8.8.8',
-//       host: '43.128.45.127',
-//       referer: 'http://43.128.45.127',
-//     },
-//   });
-
-//   return new NextResponse(await res.text());
-// };
-
-// export const POST = async () => {
-//   const ip = '8.8.8.8';
-
-//   const cashier = await fetch(
-//     'https://pay.ssl.kuaishou.com/payAPI/k/pay/kscoin/deposit/nlogin/kspay/cashier',
-//     {
-//       method: 'POST',
-//       body: JSON.stringify({
-//         ksCoin: 30,
-//         fen: 300,
-//         userId: '1746384',
-//         customize: false,
-//         kpn: 'KUAISHOU',
-//         kpf: 'PC_WEB',
-//       }),
-//       headers: {
-//         'Content-Type': 'application/json',
-//         host: 'pay.ssl.kuaishou.com',
-//         referer: 'https://www.kuaishoupay.com',
-//         'x-forwarded-for': ip,
-//       },
-//     },
-//   );
-//   const order = await cashier.json();
-
-//   const result = [];
-//   result.push(order);
-
-//   const form = new URLSearchParams();
-//   form.append('provider', 'ALIPAY');
-//   form.append('merchant_id', order.merchantId);
-//   form.append('out_order_no', order.outOrderNo);
-//   form.append('pay_amount', '300');
-
-//   const info = await fetch(
-//     'https://www.kuaishoupay.com/pay/order/h5/trade/create_pay_order',
-//     {
-//       method: 'POST',
-//       body: form.toString(),
-//       headers: {
-//         host: 'www.kuaishoupay.com',
-//         referer: 'https://www.kuaishoupay.com',
-//         'x-forwarded-for': ip,
-//         'content-type': 'application/x-www-form-urlencoded',
-//       },
-//     },
-//   );
-
-//   const payment = await info.json();
-//   result.push(payment);
-
-//   return new NextResponse(
-//     decodeURIComponent(
-//       decodeURIComponent(payment.gateway_pay_param.provider_config),
-//     ),
-//   );
-
-//   // const search = new URLSearchParams(payment.gateway_pay_param.provider_config);
-//   // const alipayUrl = new URL(
-//   //   'https://openapi.alipay.com/gateway.do?charset=utf-8',
-//   // );
-//   // search.forEach((value, key) => alipayUrl.searchParams.append(key, value));
-
-//   // const alipay = await fetch(alipayUrl, {
-//   //   method: 'get',
-//   //   headers: {
-//   //     referer: 'https://www.kuaishoupay.com',
-//   //   },
-//   //   redirect: 'manual',
-//   // });
-
-//   // result.push(alipay.headers.get('location'));
-
-//   // return NextResponse.json(result);
-// };
