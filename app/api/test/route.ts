@@ -15,7 +15,12 @@ const ip = '8.8.8.8';
 const headers = {
   cookie,
   'x-forwarded-for': ip,
+  'x-forwarded-host': 'www.kuaishoupay.com',
+  'x-forwarded-proto': 'https',
   'x-real-ip': ip,
+  'x-client-ip': ip,
+  'x-remote-ip': ip,
+  'x-remote-addr': ip,
   host: 'www.kuaishoupay.com',
 };
 
