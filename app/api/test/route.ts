@@ -46,7 +46,7 @@ export const POST = async (request: NextRequest) => {
       'content-type': 'application/x-www-form-urlencoded',
     },
     body: [
-      'provider=ALIPAT',
+      'provider=ALIPAY',
       `merchant_id=${cashierRes.merchantId}`,
       `out_order_no=${cashierRes.ksOrderId}`,
       'pay_amount=100',
