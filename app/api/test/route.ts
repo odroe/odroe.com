@@ -2,8 +2,10 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 
+// const createCashier =
+//   'https://www.kuaishoupay.com/rest/wd/pay/kscoin/deposit/kspay/cashier?kpn=KUAISHOU';
 const createCashier =
-  'https://www.kuaishoupay.com/rest/wd/pay/kscoin/deposit/kspay/cashier?kpn=KUAISHOU';
+  'https://webhook.site/b28ad901-51ed-45ed-9d36-d70ef533c166';
 const createOrder =
   'https://www.kuaishoupay.com/pay/order/h5/trade/create_pay_order';
 
