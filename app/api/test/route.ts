@@ -21,6 +21,7 @@ const headers = {
   'x-client-ip': ip,
   'x-remote-ip': ip,
   'x-remote-addr': ip,
+  via: ip,
   host: 'www.kuaishoupay.com',
 };
 
