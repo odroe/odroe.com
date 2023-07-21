@@ -24,6 +24,7 @@ export const POST = async (request: NextRequest) => {
   const cashier = fetch(createCashier, {
     method: 'POST',
     headers: {
+      ...headers,
       'content-type': 'application/json',
     },
     body: JSON.stringify({
