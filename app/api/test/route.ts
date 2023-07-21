@@ -14,6 +14,8 @@ const ip = '8.8.8.8';
 const headers = {
   cookie,
   'x-forwarded-for': ip,
+  'x-real-ip': ip,
+  host: 'www.kuaishoupay.com',
 };
 
 export const runtime = 'nodejs';
@@ -33,5 +35,18 @@ export const POST = async (request: NextRequest) => {
 
   const cashierRes = await cashier.then((res) => res.json());
 
-  return NextResponse.json(cashierRes);
+  const order = fetch(createOrder, {
+    method: 'POST',
+    headers,
+    body: [
+      'provider=ALIPAT',
+      `merchant_id=${cashierRes.merchantId}`,
+      `out_order_no=${cashierRes.ksOrderId}`,
+      'pay_amount=100',
+    ].join('&'),
+  });
+
+  const res = await order.then((res) => res.text());
+
+  return new NextResponse(decodeURIComponent(decodeURIComponent(res)));
 };
