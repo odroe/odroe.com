@@ -34,6 +34,7 @@ export const POST = async (request: NextRequest) => {
   });
 
   const cashierRes = await cashier.then((res) => res.json());
+  return NextResponse.json(cashierRes);
 
   const order = fetch(createOrder, {
     method: 'POST',
