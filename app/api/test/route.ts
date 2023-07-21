@@ -38,11 +38,13 @@ export const POST = async (request: NextRequest) => {
   });
 
   const cashierRes = await cashier.then((res) => res.json());
-  return NextResponse.json(cashierRes);
 
   const order = fetch(createOrder, {
     method: 'POST',
-    headers,
+    headers: {
+      ...headers,
+      'content-type': 'application/x-www-form-urlencoded',
+    },
     body: [
       'provider=ALIPAT',
       `merchant_id=${cashierRes.merchantId}`,
