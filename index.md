@@ -9,7 +9,7 @@ hero:
   text: '即使坠入深渊，也可重见天日。'
   tagline: My great project tagline
   image:
-    src: /assets/logo.svg
+    src: /logo.svg
     alt: Odroe
   actions:
     - theme: brand

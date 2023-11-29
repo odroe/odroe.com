@@ -6,7 +6,7 @@ export default defineConfig({
   titleTemplate: true,
   description: '即使坠入深渊，也可重见天日。',
   themeConfig: {
-    logo: '/assets/logo.svg',
+    logo: '/logo.svg',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
