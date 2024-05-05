@@ -1,4 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" fill="currentColor" class="odroe-brand-icon">
+  <defs>
+    <style>
+      .odroe-brand-icon { fill: #000 }
+      @media (prefers-color-scheme: dark) {
+        .odroe-brand-icon { fill: #fff }
+      }
+    </style>
+  </defs>
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"
