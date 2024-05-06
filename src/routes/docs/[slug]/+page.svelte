@@ -1,5 +1,5 @@
 <script lang="ts">
-  import DocSidebar from '$lib/widgets/doc-sidebar.svelte';
+  import DocSidebar from './doc-sidebar.svelte';
   import { title } from 'radash';
   import type { PageData } from './$types';
 

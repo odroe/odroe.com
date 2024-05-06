@@ -1,10 +1,8 @@
 <script lang="ts">
-  import '../app.css';
-
   import Brand from '$lib/icons/brand.svelte';
-  import NavSocial from '$lib/widgets/nav-social.svelte';
-  import Nav from '$lib/widgets/nav.svelte';
-  import Search from '$lib/widgets/search.svelte';
+  import NavSocial from './nav-social.svelte';
+  import Nav from './nav.svelte';
+  import Search from './search.svelte';
 
   import brand from '$lib/assets/odroe-brand.svg?url';
 </script>
