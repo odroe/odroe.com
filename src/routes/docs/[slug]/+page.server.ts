@@ -4,7 +4,7 @@ import { getTypedPages } from '$lib/server/contents.js';
 import { error } from '@sveltejs/kit';
 import matter from 'gray-matter';
 
-export const prerender = true;
+export const prerender = false;
 
 export async function load({ params }) {
   const pages = getTypedPages('docs');
