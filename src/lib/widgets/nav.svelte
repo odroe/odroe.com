@@ -2,8 +2,8 @@
   import { page } from '$app/stores';
 
   const menu = [
-    { href: '/products', title: 'Products' },
     { href: '/docs', title: 'Documentation' },
+    { href: '/templates', title: 'Templates' },
     { href: '/blog', title: 'Blog' },
     { href: '/about', title: 'About' },
   ];

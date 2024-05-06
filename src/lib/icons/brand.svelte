@@ -10,7 +10,7 @@
   const { 1: viewBox, 2: children } =
     /<svg.*?viewBox="(.*?)".*?>(.*?)<\/svg>/g.exec(
       brandSource
-        .replace(/<style.*?<\/style>/gis, '')
+        .replace(/<defs.*?<\/defs>/gis, '')
         .replace(/\n\r?/g, ' ')
         .replace(/\s+/g, ' '),
     ) as unknown as {

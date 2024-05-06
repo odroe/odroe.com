@@ -20,7 +20,7 @@
   />
 </svelte:head>
 
-<header class="w-full h-14 sticky px-6 flex items-center">
+<header class="w-full h-14 sticky px-6 flex items-center z-50 top-0">
   <a href="/" class="inline-flex space-x-2 items-center" title="Odroe">
     <Brand class="aspect-square h-8 fill-indigo-500" />
     <span class="sr-only">Goto Odroe homepage</span>

@@ -14,24 +14,24 @@
     rel="noopener noreferrer"
   >
     <GithubIcon class="stroke-black size-6" />
-    <span class="sr-only">View at GitHub</span>
+    <span class="sr-only">View Odroe at GitHub</span>
   </a>
 
   <a
-    href="http://github.com/odroe/odroe"
+    href="https://twitter.com/OdroeDev"
     target="_blank"
     rel="noopener noreferrer"
   >
     <XIcon class="stroke-black h-5 w-6" />
-    <span class="sr-only">Follow @odroe on X</span>
+    <span class="sr-only">Follow Odroe on X</span>
   </a>
 
   <a
-    href="http://github.com/odroe/odroe"
+    href="https://discord.gg/ms2X9TQMR8"
     target="_blank"
     rel="noopener noreferrer"
   >
     <DiscordIcon class="fill-black size-6" />
-    <span class="sr-only">View at GitHub</span>
+    <span class="sr-only">Join the Discord community of Odroe</span>
   </a>
 </div>
