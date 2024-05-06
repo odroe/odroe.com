@@ -26,9 +26,9 @@
     <span class="sr-only">Goto Odroe homepage</span>
     <span class="capitalize text-lg font-semibold">Odroe</span>
   </a>
-  <div class="px-8">
+  <!-- <div class="px-8">
     <Search />
-  </div>
+  </div> -->
   <Nav />
   <NavSocial />
 </header>

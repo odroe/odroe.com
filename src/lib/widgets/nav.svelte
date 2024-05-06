@@ -1,8 +1,13 @@
 <script lang="ts">
   import { page } from '$app/stores';
 
-  const menu = [
-    { href: '/docs', title: 'Documentation' },
+  type Menu = {
+    title: string;
+    href: string;
+  };
+
+  const menu: Menu[] = [
+    // { href: '/docs', title: 'Documentation' },
     // { href: '/templates', title: 'Templates' },
     // { href: '/blog', title: 'Blog' },
     // { href: '/about', title: 'About' },
