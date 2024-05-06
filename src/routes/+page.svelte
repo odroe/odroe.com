@@ -5,13 +5,11 @@
 <main class="container mt-32 px-6">
   <section class="mx-auto max-w-4xl">
     <h1
-      class="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white"
+      class="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center"
     >
       Create user interfaces from Setup-widget
     </h1>
-    <p
-      class="mt-6 text-lg text-slate-600 text-center max-w-2xl mx-auto dark:text-slate-400"
-    >
+    <p class="mt-6 text-lg text-slate-600 text-center max-w-2xl mx-auto">
       It is built on top of Flutter and updated with fine-grained reactions.
       Declare your state and use it throughout the entire application, and only
       code that depends on it will rerun when the state changes.
